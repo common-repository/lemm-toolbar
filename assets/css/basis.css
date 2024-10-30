@@ -1,0 +1,152 @@
+/* SCROLLBAR START */
+div.scroll-area {
+    position: fixed;
+    right: 10px;
+    bottom: 10%;
+    width: 42px;
+    transition: bottom .6s cubic-bezier(.25,.46,.45,.94),opacity .5s .2s cubic-bezier(.25,.46,.45,.94),-webkit-transform .6s cubic-bezier(.25,.46,.45,.94);
+    transition: transform .6s cubic-bezier(.25,.46,.45,.94),bottom .6s cubic-bezier(.25,.46,.45,.94),opacity .5s .2s cubic-bezier(.25,.46,.45,.94);
+    transition: transform .6s cubic-bezier(.25,.46,.45,.94),bottom .6s cubic-bezier(.25,.46,.45,.94),opacity .5s .2s cubic-bezier(.25,.46,.45,.94),-webkit-transform .6s cubic-bezier(.25,.46,.45,.94);
+}
+div.scroll-area.bringMeDown {
+    bottom: 30px;
+}
+
+div.scroll-area > div > a {
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    float: right;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    margin: 0 0 4px 0;
+    text-decoration: none;
+    position: relative;
+    bottom: auto;
+
+    transition: background .3s cubic-bezier(.25,.46,.45,.94),width .3s cubic-bezier(.25,.46,.45,.94),-webkit-transform .5s cubic-bezier(.25,.46,.45,.94);
+    transition: background .3s cubic-bezier(.25,.46,.45,.94),transform .5s cubic-bezier(.25,.46,.45,.94),width .3s cubic-bezier(.25,.46,.45,.94);
+    transition: background .3s cubic-bezier(.25,.46,.45,.94),transform .5s cubic-bezier(.25,.46,.45,.94),width .3s cubic-bezier(.25,.46,.45,.94), -webkit-transform .5s cubic-bezier(.25,.46,.45,.94);
+}
+
+div.scroll-area > div > a > span {
+    height: 42px;
+    line-height: 42px;
+    margin: 0 10px 0 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+    float: left;
+}
+
+div.scroll-area > div > a > span,
+div.scroll-area > div > a > div > input {
+    display: none;
+}
+
+
+div.scroll-area > div > a:hover > span,
+div.scroll-area > div > a:hover > div > input {
+    display: block;
+}
+
+div.scroll-area > div > a:hover > span{
+    padding: 0 7px;
+    white-space: nowrap;
+}
+
+div.scroll-area > div > a > div.icon {
+    display: flex;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    float: left;
+    font-size: 1rem;
+}
+
+/* öffnen/schließen-button */
+div.scroll-area > div > a.open-close,
+div.scroll-area > div > a.up {
+    z-index: 2100;
+    cursor: pointer;
+    width: 42px!important;
+}
+div.scroll-area > div > a.open-close  {
+    width: 42px;
+    height: 42px;
+}
+div.scroll-area > div > a.open-close:after{
+    content: "\f141";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+}
+div.scroll-area.opened > div > a.open-close:after{
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+}
+
+
+/* ein- und ausklappen */
+div.scroll-area > div {
+    position: relative;
+}
+
+/* 1 */
+div.scroll-area > div a {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    transform: translateY(46px);
+    text-align: center;
+    padding: 0 10px 0 0;
+}
+div.scroll-area > div > a.up{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+div.scroll-area > div a i {
+    width: 42px;
+}
+
+div.scroll-area.opened > div a.icon-00 {
+    transform: translateY(-0px); /* immer +46px */
+}
+
+div.scroll-area.opened > div a.icon-01 {
+    transform: translateY(-46px); /* immer +46px */
+}
+
+div.scroll-area.opened > div a.icon-02 {
+    transform: translateY(-92px); /* immer +46px */
+}
+
+div.scroll-area.opened > div a.icon-03 {
+    transform: translateY(-138px); /* immer +46px */
+}
+div.scroll-area.opened > div a.icon-04 {
+    transform: translateY(-184px); /* immer +46px */
+}
+div.scroll-area.opened > div a.icon-05 {
+    transform: translateY(-230px); /* immer +46px */
+}
+div.scroll-area.opened > div a.icon-06 {
+    transform: translateY(-276px); /* immer +46px */
+}
+div.scroll-area.opened > div a.icon-07 {
+    transform: translateY(-322px); /* immer +46px */
+}
+/* SCROLLBAR STOP */
